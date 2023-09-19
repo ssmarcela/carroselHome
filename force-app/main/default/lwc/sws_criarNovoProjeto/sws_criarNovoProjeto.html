@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Criar Projeto" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Nome do Projeto" value={projectName} onchange={handleNameChange}></lightning-input>
+            <lightning-radio-group label="Qual Serviço Será Entregue" value={qualServicoEntregue} onchange={handleServiceChange} options={qualServico}></lightning-radio-group>
+            <lightning-input label="Valor" value={valor} onchange={handleValueChange} type="number"></lightning-input>
+            <lightning-textarea label="Descrição" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+            <lightning-button label="Criar Projeto" onclick={handleCreateProject} class="slds-m-top_medium"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
