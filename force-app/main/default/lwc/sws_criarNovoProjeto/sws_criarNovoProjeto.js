@@ -1,4 +1,5 @@
 import { LightningElement, track } from 'lwc';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { createRecord } from 'lightning/uiRecordApi';
 import PROJECT_OBJECT from '@salesforce/schema/Projeto__c';
 import NAME_FIELD from '@salesforce/schema/Projeto__c.Name';
@@ -48,7 +49,13 @@ export default class Sws_criarNovoProjeto extends LightningElement {
 
         createRecord(recordInput)
             .then(project => {
-                alert('Projeto criado com o ID: ' + project.id);
+                //alert('Projeto criado com o ID: ' + project.id);
+                const toastEvent = new ShowToastEvent({
+                    title: 'Sucesso',
+                    message: `Projeto criado com sucesso!`,
+                    variant: 'success'
+                });
+                this.dispatchEvent(toastEvent);
             })
             .catch(error => {
                 alert('Erro ao criar o projeto: ' + error.body.message);

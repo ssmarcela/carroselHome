@@ -1,11 +1,13 @@
 <template>
-    <lightning-card title="Criar Projeto" icon-name="custom:custom14">
+    <lightning-card>
+        <h2 style="font-size: 1rem; color: #04623b;" class="slds-text-title_bold slds-p-left_small slds-p-left_medium">Criar Projeto</h2>
+        <h4 class="slds-p-top_small slds-p-left_small slds-p-left_medium">Registre um novo projeto conquistado de forma rápida. </h4>
         <div class="slds-m-around_medium">
             <lightning-input label="Nome do Projeto" value={projectName} onchange={handleNameChange}></lightning-input>
-            <lightning-radio-group label="Qual Serviço Será Entregue" value={qualServicoEntregue} onchange={handleServiceChange} options={qualServico}></lightning-radio-group>
             <lightning-input label="Valor" value={valor} onchange={handleValueChange} type="number"></lightning-input>
             <lightning-textarea label="Descrição" value={description} onchange={handleDescriptionChange}></lightning-textarea>
-            <lightning-button label="Criar Projeto" onclick={handleCreateProject} class="slds-m-top_medium"></lightning-button>
+            <lightning-radio-group label="Qual Serviço Será Entregue" value={qualServicoEntregue} onchange={handleServiceChange} options={qualServico} class="slds-p-bottom_medium slds-p-top_small"></lightning-radio-group>
+            <lightning-button label="Criar Projeto" onclick={handleCreateProject} class="slds-m-top_medium slds-p-top_small" icon-name="action:approval" style="color: #04623b;"></lightning-button>
         </div>
     </lightning-card>
 </template>
