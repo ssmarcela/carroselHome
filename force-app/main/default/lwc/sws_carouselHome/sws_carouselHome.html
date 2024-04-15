@@ -1,3 +1,33 @@
 <template>
-    
+    <lightning-card>
+    <div class="slds-size_3-of-2">
+        <div class="slds-text-title_bold slds-p-left_small slds-p-left_medium" style="font-size: 1rem; color: #04623b;">Principais Serviços</div>
+        <h4 class="slds-p-top_small slds-p-left_small slds-p-left_medium slds-p-bottom_small">Veja nossos três principais serviços</h4>
+        <div class="slds-p-around_small">
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src = "https://i.pinimg.com/564x/69/1b/f2/691bf22c81101b83312489611da02536.jpg"
+                    header = "Site"
+                    description = "Site com toda estrutura de página que o cliente precisa."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src = "https://i.pinimg.com/564x/21/bb/8c/21bb8c0fee49a27acae8d599f740e93d.jpg"
+                    header = "One Page"
+                    description = "Para prestadores de serviços e pequenos negócios"
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src = "https://i.pinimg.com/564x/c7/e9/9e/c7e99e067441c4e27a9516dee5ba6bb6.jpg"
+                    header = "Landing Page"
+                    description = "Para lançamentos de produtos e serviços."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</lightning-card>
 </template>
